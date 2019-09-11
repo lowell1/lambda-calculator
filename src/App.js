@@ -4,9 +4,9 @@ import "./App.css";
 // Don't forget to import any extra css/scss files you build into the correct component
 //numbers.js, operators.js, specials.js, and display.js
 import Numbers from "./components/ButtonComponents/NumberButtons/Numbers.js";
-import "./components/ButtonComponents/OperatorButtons/Operators.js";
-import "./components/ButtonComponents/SpecialButtons/Specials.js";
-import "./components/DisplayComponents/Display";
+import Operators from "./components/ButtonComponents/OperatorButtons/Operators.js";
+import Specials from "./components/ButtonComponents/SpecialButtons/Specials.js";
+import Display from "./components/DisplayComponents/Display";
 
 
 // Logo has already been provided for you. Do the same for the remaining components
@@ -24,7 +24,16 @@ function App() {
       <Logo />
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
-        <Numbers/>
+        <Display val={0}/>
+        <div class="buttonArea">
+          <div class="specsAndNums">
+            <Specials class="bgBlue"/>
+            <Numbers class="bgPurple"/>
+          </div>
+          <div class="opers">
+            <Operators class="bgGreen"/>
+          </div>
+        </div>
       </div>
     </div>
   );
